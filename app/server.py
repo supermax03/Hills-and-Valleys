@@ -18,6 +18,7 @@ class MainHandler(tornado.web.RequestHandler):
 
 
 class GroundInfoHandler(tornado.web.RequestHandler):
+    @tornado.web.addslash
     def get(self):
         more_info = {
             'Examples': {1: {"input": "http://localhost:port/groundinfo/1,0,1",
@@ -42,8 +43,7 @@ class SolutionHandler(RequestHandler):
 
 app = Application([
     (r'/', MainHandler),
-    (r'/info/', GroundInfoHandler),
-    (r'/info', GroundInfoHandler),
+    (r'/info/?', GroundInfoHandler),
     (r'/groundinfo/(.*)', SolutionHandler),
 
 ])
