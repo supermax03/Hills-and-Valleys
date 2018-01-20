@@ -1,5 +1,5 @@
 #####################################################
-#Author: Maximiliano Bordon
+# Author: Maximiliano Bordon
 #####################################################
 def getgroundinfo(ground):
     isValley = 1
@@ -21,12 +21,9 @@ def getgroundinfo(ground):
                 isValley = 0
         previous = ground[index]
         index += 1
-    if (isValley):
-        count_valleys += 1
+    if (isValley and not isHill):
+            count_valleys += 1
     else:
-        if (isHill):
-            count_hills += 1
+         if (isHill and not isValley):
+                  count_hills += 1
     return (count_hills, count_valleys)
-
-
-

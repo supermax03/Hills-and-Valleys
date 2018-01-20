@@ -25,7 +25,7 @@ class GroundInfoHandler(tornado.web.RequestHandler):
                              "output": "Hills->2 Valleys->1"
                              },
                          2: {"input": "http://localhost:port/groundinfo/1,1,1",
-                             "output": "Hills->0 Valleys->1"}
+                             "output": "Hills->0 Valleys->0"}
                          }
 
         }
